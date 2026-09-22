@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Title</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fafafa;
+        }
+        h1, h2, h3 { 
+            color: #2c3e50; 
+        }
+        h1 { 
+            text-align: center; 
+            font-size: 2.5em; 
+            margin-bottom: 10px; 
+        }
+        .authors { 
+            text-align: center; 
+            font-size: 1.2em; 
+            margin-bottom: 10px; 
+        }
+        .affiliations { 
+            text-align: center; 
+            font-style: italic; 
+            color: #666; 
+            margin-bottom: 30px; 
+        }
+        .links { 
+            text-align: center; 
+            margin-bottom: 40px; 
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        .links a:hover { 
+            background-color: #2980b9; 
+        }
+        /* .section { 
+            margin-bottom: 40px; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+        } */
+        .dataset-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 15px; 
+            font-size: 0.95em;
+        }
+        .dataset-table th, .dataset-table td { 
+            border: 1px solid #eee; 
+            padding: 12px; 
+            text-align: left; 
+        }
+        .dataset-table th { 
+            background-color: #f8f9fa; 
+            color: #333;
+        }
+        .dataset-table tr:hover {
+            background-color: #fcfcfc;
+        }
+        .icon {
+            width: 50px;          
+            height: 50px;         
+            vertical-align: middle; 
+            margin-right: 8px;    
+            margin-bottom: 3px;
+        }
+        pre { 
+            background-color: #f4f4f4; 
+            padding: 15px; 
+            border-radius: 5px; 
+            overflow-x: auto; 
+        }
+        code { 
+            font-family: Consolas, Monaco, "Courier New", monospace; 
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Paper Title</h1>
+        
+        <div class="authors">
+            Author 1<sup>1</sup>, Author 2<sup>2</sup>, Author 3<sup>1</sup>
+        </div>
+        
+        <div class="affiliations">
+            <sup>1</sup>Organization 1 &nbsp;&nbsp;&nbsp; <sup>2</sup>Organization 2
+        </div>
+        
+        <div class="links">
+            <a href="link-to-your-paper.pdf" target="_blank">
+                <img src="images/paper.png" alt="PDF Icon" class="icon"> Paper (PDF)
+            </a>
+            
+            <a href="https://github.com/yourusername/yourrepo" target="_blank">
+                <img src="images/github.png" alt="GitHub Icon" class="icon"> Code (GitHub)
+            </a>
+            
+            <a href="#dataset">
+                <img src="images/database.svg" alt="Download Icon" class="icon"> Dataset
+            </a>
+        </div>
+    </header>
+
+    <div id="abstract">
+        <h2>Abstract</h2>
+        <p>
+            lorem ipsum dolor sit amet consectetur adipiscing elit occaecat libero sunt quos in imperdiet do non consequatur culpa nisi qui do nulla odio ducimus ut quidem quod in nulla dolore adipiscing minus non et facere corrupti dolor in rerum veniam nam in officia eum et ducimus nulla consequatur optio enim irure anim duis molestias libero nisi excepteur voluptas quod nam dolorem vero assumenda occaecat excepteur cupiditate elit rerum vero id cillum qui et quod expedita reprehenderit deserunt consequatur voluptas incididunt
+        </p>
+    </div>
+
+
+    <div id="media" style="text-align: center;">
+        <img src="cool_picture.jpg" alt="Image from paper" style="max-width: 100%; border-radius: 5px;">
+    </div>
+    
+
+    <div id="dataset">
+        <h2>Dataset Downloads</h2>
+        <table class="dataset-table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Description</th>
+                    <th>Size</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>real_original_data.zip</code></td>
+                    <td>Original raws</td>
+                    <td>1.2&nbsp;GB</td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+                <tr>
+                    <td><code>everything_else.zip</code></td>
+                    <td>Orthorectified real images, Orthorectified simulated images, Sun sweep simulated images</td>
+                    <td>3.4&nbsp;GB</td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <h3 style="margin-top: 30px;">Table 2</h3>
+        <table class="dataset-table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Description</th>
+                    <th>Size</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>filename</code></td>
+                    <td>blah blah blah</td>
+                    <td>15 MB</td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+
+    <div id="dataset_format">
+        <h2>Dataset Format</h2>
+        <div id="media" style="text-align: center;">
+            <img src="cool_picture.jpg" alt="file structure" style="max-width: 100%; border-radius: 5px;">
+        </div>
+        <ul>
+            <li>file1: lorem ipsum dolor sit amet</li>
+            <li>file2: lorem ipsum dolor sit amet</li>
+            <li>file3: lorem ipsum dolor sit amet</li>
+        </ul>
+    </div>
+
+    <div id="citation">
+        <h2>Citation</h2>
+        <p>If you find this dataset or code useful in your work, please cite our paper:</p>
+        <pre><code>@article{lastname_paper,
+        title={Title},
+        author={authors},
+        journal={journal},
+        year={2026},
+        publisher={IEEE}
+        }
+        </code></pre>
+    </div>
+
+    <div id="acknowledgements">
+        <h2>Acknowledgements</h2>
+        <p>
+            lorem ipsum dolor sit amet consectetur adipiscing elit occaecat libero sunt quos in imperdiet do non consequatur culpa nisi qui do nulla odio ducimus ut quidem quod in nulla dolore adipiscing minus non et facere corrupti dolor in rerum veniam nam in officia eum et ducimus nulla consequatur optio enim irure anim duis molestias libero nisi excepteur voluptas quod nam dolorem vero assumenda occaecat excepteur cupiditate elit rerum vero id cillum qui et quod expedita reprehenderit deserunt consequatur voluptas incididunt
+        </p>
+    </div>
+
+</body>
+</html>
