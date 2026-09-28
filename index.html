@@ -105,6 +105,18 @@
             border-radius: 8px; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
         } */
+        .tree {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .tree pre {
+            background-color: var(--code-bg);
+            padding: 20px 40px;
+            border-radius: 8px;
+            width: fit-content;
+            text-align: left; 
+        }
         .dataset-table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -169,7 +181,7 @@
                 <img src="images/paper.png" alt="PDF Icon" class="icon"> Paper (PDF)
             </a>
             
-            <a href="https://github.com/yourusername/yourrepo" target="_blank">
+            <a href="https://github.com/username/yourrepo" target="_blank">
                 <img src="images/github.png" alt="GitHub Icon" class="icon"> Code (GitHub)
             </a>
             
@@ -196,7 +208,47 @@
     <div id="media" style="text-align: center;">
         <img src="cool_picture.jpg" alt="Image from paper" style="max-width: 100%; border-radius: 5px;">
     </div>
-    
+
+    <div id="dataset_format">
+        <h2>Dataset Format</h2>
+        <p>We provide the dataset in the following format. please review the 
+            <a href="https://github.com/username/yourrepo" target="_blank">README</a> 
+            for comprehensive details.</p>
+        <div id="media" style="text-align: center;">
+            <img src="cool_picture.jpg" alt="file structure" style="max-width: 100%; border-radius: 5px;">
+        </div>
+        <div class="tree">
+            <pre><code>dataset/
+            ├── real_float32/
+            ├── real_float32_extra/
+            ├── real_lander/
+            ├── real_lander_extra/
+            ├── real_no_lander/
+            ├── real_no_lander_extra/
+            ├── real_original/
+            ├── real_orignal_data/
+            ├── sim_lander/
+            ├── sim_no_lander/
+            ├── sun_sweep_sim_lander/
+            ├── sun_sweep_sim_no_lander/
+            ├── benchmark_assignments.json
+            ├── im1_dataset_filter_criteria.txt
+            ├── README_DATA.md
+            </code></pre>
+        </div>
+        <ul>
+            <li>real_no_lander, real_lander: Main aligned observations: 28 before landing, 31 after.</li>
+            <li>real_float32: Calibrated float32 GeoTIFF inputs for the same 59 main observations; NaN marks invalid pixels.</li>
+            <li>real_no_lander_extra, real_lander_extra: Additional aligned observations; 7 before, 17 after.</li>
+            <li>real_float32_extra: Calibrated float32 GeoTIFFs for the 24 additional observations; excluded from the benchmark.</li>
+            <li>sim_no_lander, sim_lander: 83 sunlight-matched predictions per state.</li>
+            <li>real_original: 83 unrectified original-camera PNG crops.</li>
+            <li>real_original_data: 83 calibrated source .IMG files with row-range/checksum JSON sidecars.</li>
+            <li>sun_sweep_sim_no_lander, sun_sweep_sim_lander: 100 paired Sun directions; 200 predictions total.</li>
+            <li>im1_dataset_filter_criteria.txt: Rules for dataset selection</li>
+            <li>benchmark_assignments.json: Exact four benchmark group assignments</li>
+        </ul>
+    </div>
 
     <div id="dataset">
         <h2>Dataset Downloads</h2>
@@ -224,38 +276,6 @@
                 </tr>
             </tbody>
         </table>
-
-        <!-- <h3 style="margin-top: 30px;">Table 2</h3>
-        <table class="dataset-table">
-            <thead>
-                <tr>
-                    <th>File Name</th>
-                    <th>Description</th>
-                    <th>Size</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>filename</code></td>
-                    <td>blah blah blah</td>
-                    <td>15 MB</td>
-                    <td><a href="#">Download</a></td>
-                </tr>
-            </tbody>
-        </table> -->
-    </div>
-
-    <div id="dataset_format">
-        <h2>Dataset Format</h2>
-        <div id="media" style="text-align: center;">
-            <img src="cool_picture.jpg" alt="file structure" style="max-width: 100%; border-radius: 5px;">
-        </div>
-        <ul>
-            <li>file1: lorem ipsum dolor sit amet</li>
-            <li>file2: lorem ipsum dolor sit amet</li>
-            <li>file3: lorem ipsum dolor sit amet</li>
-        </ul>
     </div>
 
     <div id="citation">
