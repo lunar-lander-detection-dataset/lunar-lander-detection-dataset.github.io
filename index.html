@@ -190,7 +190,7 @@
                 <img src="images/github.png" alt="GitHub Icon" class="icon"> Code (GitHub)
             </a>
             
-            <a href="#dataset">
+            <a href="#data_release">
                 <img src="images/database.svg" alt="Download Icon" class="icon"> Dataset
             </a>
         </div>
@@ -200,102 +200,36 @@
         <h2>Abstract</h2>
         <p>
         This study identifies and evaluates candidate solutions for object and change detection on the lunar surface. With numerous upcoming missions to the Moon, there is increased
-        demand for space situational awareness (SSA) in and around cislunar space, including a capability to detect, localize, andmonitor the activity of lunar surface assets like NASA’s Human
-        Landing System (HLS) and Commercial Lunar Payload Service(CLPS) landers. Our analysis is grounded in a design referencemission with spacecraft in a ∼100 km Low Lunar Orbit (LLO)
+        demand for space situational awareness (SSA) in and around cislunar space, including a capability to detect, localize, and monitor the activity of lunar surface assets like NASA’s Human
+        Landing System (HLS) and Commercial Lunar Payload Service (CLPS) landers. Our analysis is grounded in a design reference mission with spacecraft in a ∼100 km Low Lunar Orbit (LLO)
         utilizing an optic with ≤2 m effective surface resolution. We assess candidate solutions across multiple datasets, including
-        synthetic imagery generated from our simulation framework, real imagery from the Lunar Reconnaissance Orbiter (LRO), and hybrid mixtures of both. We assess feasibility of detection
-        methods on relevant space edge computing, and score solutions against a targeted set of metrics: maximizing both precision and recall, while minimizing memory footprint and computational
-        speed. Finally, we recommend top candidate solutions for lunar surface object and change detection to consider for future lunar missions.        
+        synthetic imagery generated from our simulation framework, real imagery from the Lunar Reconnaissance Orbiter (LRO), and hybrid mixtures of both. To assess the feasibility of detection 
+        methods on relevant space edge computing, we define a targetedset of metrics: maximizing both precision and recall, while minimizing memory footprint and execution time. We evaluate 
+        nine change-detection algorithms on IM-1 site imagery. Across four repetitions of the evaluation, a predicted pre-landing reference with background-normalized Sobel scoring achieved 90–100% 
+        recall and 7–33% candidate precision in centered 512-pixel regions. We also evaluate a transformer, a Siamese CNN, and a convolutional autoencoder in separate experiments. 
+        Finally, we recommend top candidate solutions for lunar surface object and change detection to consider for future lunar missions.
         </p>
     </div>
 
 
     <div id="media" style="text-align: center;">
-        <img src="cool_picture.jpg" alt="Image from paper" style="max-width: 100%; border-radius: 5px;">
+        <video autoplay loop muted width="100%">
+        <source src="images/demo.mp4" type="video/mp4" style="max-width: 100%; border-radius: 5px;">
+        </video>
     </div>
 
-    <div id="dataset_format">
-        <h2>Dataset Format</h2>
-        <p>We provide the dataset in the following format. please review the 
-            <a href="https://github.com/username/yourrepo" target="_blank">README</a> 
-            for comprehensive details.</p>
-        <div class="tree">
-            <pre><code>
-            dataset/
-                ├── real_float32/
-                ├── real_float32_extra/
-                ├── real_lander/
-                ├── real_lander_extra/
-                ├── real_no_lander/
-                ├── real_no_lander_extra/
-                ├── real_original/
-                ├── real_orignal_data/
-                ├── sim_lander/
-                ├── sim_no_lander/
-                ├── sun_sweep_sim_lander/
-                ├── sun_sweep_sim_no_lander/
-                ├── benchmark_assignments.json
-                ├── im1_dataset_filter_criteria.txt
-                ├── README_DATA.md</code></pre>
-        </div>
-        <ul>
-            <li>real_no_lander, real_lander: Main aligned observations: 28 before landing, 31 after.</li>
-            <li>real_float32: Calibrated float32 GeoTIFF inputs for the same 59 main observations; NaN marks invalid pixels.</li>
-            <li>real_no_lander_extra, real_lander_extra: Additional aligned observations; 7 before, 17 after.</li>
-            <li>real_float32_extra: Calibrated float32 GeoTIFFs for the 24 additional observations; excluded from the benchmark.</li>
-            <li>sim_no_lander, sim_lander: 83 sunlight-matched predictions per state.</li>
-            <li>real_original: 83 unrectified original-camera PNG crops.</li>
-            <li>real_original_data: 83 calibrated source .IMG files with row-range/checksum JSON sidecars.</li>
-            <li>sun_sweep_sim_no_lander, sun_sweep_sim_lander: 100 paired Sun directions; 200 predictions total.</li>
-            <li>im1_dataset_filter_criteria.txt: Rules for dataset selection</li>
-            <li>benchmark_assignments.json: Exact four benchmark group assignments</li>
-        </ul>
-    </div>
-
-    <div id="dataset">
-        <h2>Dataset Downloads</h2>
-        <table class="dataset-table">
-            <thead>
-                <tr>
-                    <th>File Name</th>
-                    <th>Description</th>
-                    <th>Size</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>real_original_data.zip</code></td>
-                    <td>Original raws</td>
-                    <td>1.2&nbsp;GB</td>
-                    <td><a href="#">Download</a></td>
-                </tr>
-                <tr>
-                    <td><code>everything_else.zip</code></td>
-                    <td>Orthorectified real images, Orthorectified simulated images, Sun sweep simulated images</td>
-                    <td>3.4&nbsp;GB</td>
-                    <td><a href="#">Download</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="citation">
-        <h2>Citation</h2>
-        <p>If you find this dataset or code useful in your work, please cite our paper:</p>
-        <pre><code>@article{lastname_paper,
-        title={Title},
-        author={authors},
-        journal={journal},
-        year={2026},
-        publisher={IEEE}
-        }</code></pre>
+    <div id="data_release">
+        <h2>Dataset</h2>
+        <p>Pending public release. Estimated date of release is November 1st, 2026.</p>
     </div>
 
     <div id="acknowledgements">
         <h2>Acknowledgements</h2>
         <p>
-        This work was funded by. . .
+        This work was completed as a part of the Next Generation Multi-Agent Swarm (NGS) study within the Distributed
+        Spacecraft Autonomy (DSA) group at NASA Ames Research Center. This work was funded by the Small Spacecraft and Distributed Systems (SSDS) 
+        program within NASA’s Research and Technology Mission Directorate (RTMD). Additional funding for this work was provided by the NASA 
+        Early Career Initiative (ECI).
         </p>
     </div>
 
